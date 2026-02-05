@@ -1,0 +1,26 @@
+// Test for loops
+
+i32 main() {
+    // Basic for loop
+    for (i32 i = 0; i < 5; i = i + 1) {
+        println("i = ${i}");
+    }
+    
+    println("---");
+    
+    // Counting down
+    for (i32 j = 5; j > 0; j = j - 1) {
+        println("Countdown: ${j}");
+    }
+    
+    println("---");
+    
+    // Sum
+    i32 sum = 0;
+    for (i32 k = 1; k <= 5; k = k + 1) {
+        sum = sum + k;
+    }
+    println("Sum 1-5: ${sum}");
+    
+    return 0;
+}

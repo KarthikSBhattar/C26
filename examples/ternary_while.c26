@@ -1,0 +1,26 @@
+// Test ternary operator and while loops
+
+i32 main() {
+    // Ternary operator
+    i32 age = 20;
+    str status = age >= 18 ? "Adult" : "Minor";
+    println("Status: ${status}");
+    
+    i32 max = (10 > 5) ? 10 : 5;
+    println("Max: ${max}");
+    
+    // Nested ternary
+    i32 x = 15;
+    str size = x > 20 ? "Large" : (x > 10 ? "Medium" : "Small");
+    println("Size: ${size}");
+    
+    // While loop
+    i32 count = 0;
+    while (count < 5) {
+        println("Count: ${count}");
+        count = count + 1;
+    }
+    
+    println("Done!");
+    return 0;
+}

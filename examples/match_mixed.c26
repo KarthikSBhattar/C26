@@ -1,0 +1,11 @@
+// Mixed types in match
+i32 main() {
+    i32 x = 1;
+    // This should probably fail or produce weird IR if types must match exactly
+    match (x) {
+        1 => 100,
+        2 => 200.5,
+        _ => 0
+    };
+    return 0;
+}

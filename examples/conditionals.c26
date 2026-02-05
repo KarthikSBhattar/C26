@@ -1,0 +1,23 @@
+i32 main() {
+    i32 x = 10;
+
+    if (x > 5) {
+        println("x is greater than 5");
+    }
+
+    if ("hi" == "hi") {
+        println("Big");
+    } else {
+        println("Small");
+    }
+
+    if (x > 20) {
+        println("Very big");
+    } else if (x > 5) {
+        println("Medium");
+    } else {
+        println("Small");
+    }
+
+    return 0;
+}

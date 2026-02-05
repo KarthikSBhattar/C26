@@ -1,0 +1,17 @@
+// Array initialization test
+include square;
+
+i32 main() {
+    // Array of strings
+    str[] names = ["John", "Jeff", "Alice"];
+
+    // Array of integers
+    i32[] nums = [1, 2, 3, 4, 5];
+
+    // Tuple with mixed types
+    (i32, str, bool) person = (25, "Bob", true);
+
+    println("${square(5)}");
+    println("${greet("John")}");
+    return 0;
+}

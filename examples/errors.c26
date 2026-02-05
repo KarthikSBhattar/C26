@@ -1,0 +1,19 @@
+// Return (value, error) tuple
+(i32, bool) divide(i32 a, i32 b) {
+    if (b == 0) {
+        return (0, false);  // (result, success)
+    }
+    return (a / b, true);
+}
+
+i32 main() {
+    i32 result, bool ok = divide(10, 2);
+    
+    if (!ok) {
+        println("Division failed");
+        return 1;
+    }
+    
+    println("Result: ${result}");
+    return 0;
+}

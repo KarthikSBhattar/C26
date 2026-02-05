@@ -1,0 +1,42 @@
+i32 main() {
+    // Initially allocate memory for 5 integers
+    i32 *ptr = (i32 *)malloc(5 * sizeof(i32));
+    
+    // Check if allocation was successful
+    if (ptr == null) {
+        println("Memory Allocation Failed");
+        exit(0);
+    }
+    
+    // Now, we need to store 8 elements so
+    // Reallocate to store 8 integers
+    ptr = (i32 *)realloc(ptr, 8 * sizeof(i32)); 
+    
+    // Check if reallocation was successful
+    if (ptr == null) {
+        println("Memory Reallocation Failed");
+        exit(0);
+    }
+    
+    // Assume we only use 5 elements now
+    for (i32 i = 0; i < 5; i++) {
+        ptr[i] = (i + 1) * 10;
+    }
+    
+    // Shrink the array back to 5 elements
+    ptr = (i32 *)realloc(ptr, 5 * sizeof(i32));
+    
+    // Check if shrinking was successful
+    if (ptr == null) {
+        println("Memory Reallocation Failed");
+        exit(0);
+    }
+    
+    for (i32 i = 0; i < 5; i++)
+        println("${ptr[i]}");
+    
+    // Finally, free the memory when done
+    free(ptr);
+    
+    return 0;
+}

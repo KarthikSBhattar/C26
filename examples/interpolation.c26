@@ -1,0 +1,18 @@
+// Test string interpolation
+
+i32 main() {
+    str name = "Alice";
+    i32 age = 25;
+    f64 height = 5.8;
+    
+    println("Hello ${name}!");
+    println("${name} is ${age} years old");
+    
+    i32 x = 10;
+    println("Value of x is ${x}");
+    
+    bool active = true;
+    println("Active: ${active}");
+    
+    return 0;
+}

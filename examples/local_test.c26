@@ -1,0 +1,7 @@
+include local_lib;
+
+void main() {
+    public_func();
+    // The following should fail
+    secret(); 
+}

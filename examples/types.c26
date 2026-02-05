@@ -1,0 +1,34 @@
+// C26 Type System Test
+
+i32 main() {
+    // Primitive integers
+    i8 tiny = 127;
+    i16 small = 1000;
+    i32 medium = 42;
+    i64 big = 9999999;
+    
+    // Unsigned
+    u8 byte = 255;
+    u32 count = 100;
+    
+    // Floats
+    f32 pi = 3.14;
+    f64 precise = 3.14159265358979;
+    
+    // Boolean and char
+    bool flag = true;
+    char letter = 'A';
+    
+    // String
+    str name = "C26";
+    
+    // Array type
+    i32[] numbers;
+
+    dict<i32, str> map;
+    
+    // Tuple 
+    (i32, f64, bool) data;
+    
+    return 0;
+}

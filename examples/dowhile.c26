@@ -1,0 +1,15 @@
+i32 main() {
+    i32 i = 0;
+    println("First loop:");
+    do {
+        print("i is ${i}\n");
+        i = i + 1;
+    } while (i < 3);
+
+    println("Second loop:");
+    do {
+        println("This should print once");
+    } while (false);
+    
+    return 0;
+}

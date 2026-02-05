@@ -1,0 +1,58 @@
+// Complex match expressions test
+
+i32 factorial(i32 n) {
+    if (n <= 1) { return 1; }
+    return n * factorial(n - 1);
+}
+
+i32 main() {
+    i32 a = 10;
+    i32 b = 20;
+    i32 x = 5;
+
+    // Match with variables in cases (dynamic match)
+    // Note: C26 match implementation evaluates cases in order
+    println("Testing dynamic match:");
+    i32 res1 = match (x) {
+        a => 100, // x == 10? No
+        b => 200, // x == 20? No
+        5 => 500, // x == 5? Yes
+        _ => 0
+    };
+    println("Result 1: ${res1}");
+
+    // Match with function calls in bodies
+    println("Testing match with function calls:");
+    i32 n = 3;
+    i32 res2 = match (n) {
+        1 => factorial(1),
+        2 => factorial(2),
+        3 => factorial(3), // Should be 6
+        _ => -1
+    };
+    println("Result 2: ${res2}");
+
+    // Nested match
+    println("Testing nested match:");
+    i32 val = 1;
+    i32 res3 = match (val) {
+        0 => 0,
+        1 => match (val + 1) { // match(2)
+            2 => 1000,
+            _ => 2000
+        },
+        _ => 9999
+    };
+    println("Result 3: ${res3}");
+
+    // Match with expression in case value
+    println("Testing match with expression in case:");
+    i32 y = 2;
+    i32 res4 = match (y) {
+        1 + 1 => 888, // 2 => 888
+        _ => 999
+    };
+    println("Result 4: ${res4}");
+
+    return 0;
+}

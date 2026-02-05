@@ -1,0 +1,29 @@
+// Test match expressions
+
+i32 main() {
+    i32 x = 3;
+    
+    // Match expression
+    i32 result = match (x) {
+        1 => 100,
+        2 => 200,
+        3 => 300,
+        _ => 999
+    };
+    println("match result: ${result}");
+    
+    // Another match
+    i32 y = 10;
+    i32 doubled = match (y) {
+        5 => 10,
+        10 => 20,
+        15 => 30,
+        _ => 0
+    };
+    println("doubled: ${doubled}");
+    
+    // Using match result
+    println("Result is ${result}");
+    
+    return 0;
+}

@@ -1,0 +1,8 @@
+include ..examples.greeting as g;
+
+i32 main() {
+  print("Starting main\n");
+  greet();
+  g.greet();
+  return 0;
+}

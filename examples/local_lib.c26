@@ -1,0 +1,8 @@
+local void secret() {
+    print("secret\n");
+}
+
+void public_func() {
+    print("public calling secret\n");
+    secret();
+}

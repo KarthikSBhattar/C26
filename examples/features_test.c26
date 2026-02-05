@@ -1,0 +1,69 @@
+bool log_false(str msg) {
+    print(msg, "\n");
+    return false;
+}
+
+bool log_true(str msg) {
+    print(msg, "\n");
+    return true;
+}
+
+i32 main() {
+    // Test Short-Circuiting
+    print("Testing Short-Circuiting:\n");
+    auto t = true;
+    auto f = false;
+
+    // Should print "Short-circuit OR success"
+    // t is true, so log_false should NOT be called.
+    if (t || log_false("Fail OR")) {
+        print("Short-circuit OR success\n");
+    }
+
+    // Should print "Short-circuit AND success"
+    // f is false, so log_true should NOT be called.
+    if (!f && log_true("Fail AND")) {
+        print("Fail AND block\n");
+    } else {
+        print("Short-circuit AND success\n");
+    }
+
+    // Test Null
+    print("\nTesting Null:\n");
+    auto ptr = null;
+    if (ptr == null) {
+        print("ptr is null\n");
+    }
+
+    // Test Typeof
+    print("\nTesting Typeof:\n");
+    print("typeof(1): ", typeof(f), "\n");
+    print("typeof(1.5): ", typeof(1.5), "\n");
+    print("typeof(true): ", typeof(true), "\n");
+    print("typeof(\"hello\"): ", typeof("hello"), "\n");
+
+    // Test Auto
+    print("\nTesting Auto:\n");
+    auto x = 10;
+    auto y = 3.14;
+    print("x: ", x, "\n");
+    print("y: ", y, "\n");
+    auto s = "auto string";
+    print(s, "\n");
+
+    // Test Tuple Destructuring
+    print("\nTesting Destructuring:\n");
+    auto pair = (100, 200);
+    i32 a = 0; i32 b = 0;
+    auto ignored = ((a, b) = pair);
+    print("a: ", a, "\n");
+    print("b: ", b, "\n");
+
+    i32 c = 0; i32 d = 0;
+    auto ignored2 = ((c, d) = (300, 400));
+    print("c: ", c, "\n");
+    print("d: ", d, "\n");
+
+    print("\nDone.\n");
+    return 0;
+}

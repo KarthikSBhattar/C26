@@ -1,0 +1,8 @@
+local inline void helper() {
+  print("Inside local helper\n");
+}
+
+void greet() {
+  helper();
+  print("Inside greet\n");
+}

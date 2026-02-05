@@ -1,0 +1,38 @@
+// Test function parameters
+
+i32 add(i32 a, i32 b) {
+    return a + b;
+}
+
+i32 multiply(i32 x, i32 y) {
+    i32 result = x * y;
+    return result;
+}
+
+(i32, i32) add_tuple(i32 a, i32 b) {
+    return (a + b, a - b);
+}
+
+str greet(str name) {
+    return "Hello ${name}";
+}
+
+i32 main() {
+    i32 sum = add(5, 3);
+    println(sum);
+    
+    i32 product = multiply(4, 7);
+    println(product);
+    
+    // Nested call
+    i32 combined = add(multiply(2, 3), 4);
+    println(combined);
+
+    println(a);
+    println(b);
+    
+    str greeting = greet("Karthik");
+    println(greeting);
+    
+    return 0;
+}

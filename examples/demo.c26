@@ -1,0 +1,57 @@
+i32 main() {
+    // Integers
+    i32 age = 25;
+    i64 bignum = 9999999999;
+
+    // Floats
+    f64 pi = 3.14159;
+    f32 temp = 98.6;
+
+    // String and char
+    str name = "Alice";
+    char letter = 'A';
+
+    // Boolean
+    bool active = true;
+    bool done = false;
+
+    // Arrays
+    str[] friends = ["Bob", "Charlie", "Diana"];
+    i32[] scores = [95, 87, 92, 78];
+
+    // Print all types
+    println("=== C26 Variable Demo ===");
+
+    print("Name: ");
+    println(name);
+
+    print("Age: ");
+    println(age);
+
+    print("Big number: ");
+    println(bignum);
+
+    print("Pi: ");
+    println(pi);
+
+    print("Letter: ");
+    println(letter);
+
+    print("Active: ");
+    println(active);
+
+    print("Done: ");
+    println(done);
+
+    // Tuple
+    (i32, str, (bool, str)) person = (30, "Eve", (true, "Karthik"));
+    print("Person: ");
+    println(person);
+
+    print("Friends: ");
+    println(friends);
+
+    println("=== Complete! ===");
+
+    return 0;
+}
